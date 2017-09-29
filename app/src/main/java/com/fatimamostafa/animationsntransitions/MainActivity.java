@@ -7,6 +7,9 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.fatimamostafa.animationsntransitions.animationtypes.DrawableAnimationActivity;
+import com.fatimamostafa.animationsntransitions.animationtypes.InterPolatorActivity;
+import com.fatimamostafa.animationsntransitions.animationtypes.ObjectAnimatorActivity;
+import com.fatimamostafa.animationsntransitions.animationtypes.PropertyAnimationActivity;
 import com.fatimamostafa.animationsntransitions.animationtypes.ViewAnimationActivity;
 
 import butterknife.BindView;
@@ -27,7 +30,10 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
 
         String[] titles = {
                 "View Animation",
-                "Drawable Animation"
+                "Drawable Animation",
+                "Property Animation",
+                "Object Animator",
+                "Interpolator Animator"
         };
 
         mLayoutManager = new GridLayoutManager(this,2);
@@ -46,6 +52,18 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
             case 1:
                 Intent drawableIntent = new Intent(this, DrawableAnimationActivity.class);
                 startActivity(drawableIntent);
+                break;
+            case 2:
+                Intent propertyIntent = new Intent(this, PropertyAnimationActivity.class);
+                startActivity(propertyIntent);
+                break;
+            case 3:
+                Intent objectIntent = new Intent(this, ObjectAnimatorActivity.class);
+                startActivity(objectIntent);
+                break;
+            case 4:
+                Intent interpolatorIntent = new Intent(this, InterPolatorActivity.class);
+                startActivity(interpolatorIntent);
                 break;
         }
     }
