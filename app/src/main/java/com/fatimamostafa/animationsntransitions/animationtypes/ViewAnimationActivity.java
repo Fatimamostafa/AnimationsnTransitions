@@ -1,4 +1,4 @@
-package com.fatimamostafa.animationsntransitions;
+package com.fatimamostafa.animationsntransitions.animationtypes;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,11 +8,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.fatimamostafa.animationsntransitions.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ViewAnimation extends AppCompatActivity {
+public class ViewAnimationActivity extends AppCompatActivity {
 
     @BindView(R.id.ivFace)
     ImageView ivFace;
@@ -57,10 +59,21 @@ public class ViewAnimation extends AppCompatActivity {
                 ivFace.startAnimation(animation);
                 break;
             case R.id.btnAnimateJava:
-
+                ivFace.animate()
+                        .scaleX(2)
+                        .scaleY(2)
+                        .rotationX(180)
+                        .rotationY(180)
+                        .translationX(200)
+                        .translationY(200)
+                        .setDuration(2000);
                 break;
             case R.id.btnRefresh:
-                ivFace.setVisibility(View.GONE);
+                ivFace.setVisibility(View.VISIBLE);
+                ivFace.animate()
+                        .scaleX(1)
+                        .scaleY(1)
+                        .setDuration(1000);
                 break;
         }
     }

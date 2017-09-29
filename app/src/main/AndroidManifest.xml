@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewAnimation"></activity>
+        <activity android:name=".animationtypes.ViewAnimationActivity" />
+        <activity android:name=".animationtypes.DrawableAnimationActivity" />
+        <activity android:name=".animationtypes.PropertyAnimationActivity"></activity>
     </application>
 
 </manifest>

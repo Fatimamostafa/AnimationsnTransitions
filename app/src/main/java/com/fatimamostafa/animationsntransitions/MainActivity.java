@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.fatimamostafa.animationsntransitions.animationtypes.DrawableAnimationActivity;
+import com.fatimamostafa.animationsntransitions.animationtypes.ViewAnimationActivity;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -23,8 +26,8 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
         ButterKnife.bind(this);
 
         String[] titles = {
-                "View Animation with XML",
-                "View Animation with Java"
+                "View Animation",
+                "Drawable Animation"
         };
 
         mLayoutManager = new GridLayoutManager(this,2);
@@ -37,8 +40,12 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
     public void onClickCallback(int position) {
         switch (position) {
             case 0:
-                Intent intent = new Intent(this, ViewAnimation.class);
-                startActivity(intent);
+                Intent viewIntent = new Intent(this, ViewAnimationActivity.class);
+                startActivity(viewIntent);
+                break;
+            case 1:
+                Intent drawableIntent = new Intent(this, DrawableAnimationActivity.class);
+                startActivity(drawableIntent);
                 break;
         }
     }
