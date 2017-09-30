@@ -23,7 +23,8 @@
         <activity android:name=".animationtypes.InterPolatorActivity" />
         <activity android:name=".transitions.crossfade.CrossfadeTransitionActivity" />
         <activity android:name=".transitions.crossfade.DetailActivity" />
-        <activity android:name=".transitions.viewpager.ViewpagerActivity"></activity>
+        <activity android:name=".transitions.viewpager.ViewpagerActivity" />
+        <activity android:name=".transitions.flip.FlipAnimationActivity"></activity>
     </application>
 
 </manifest>

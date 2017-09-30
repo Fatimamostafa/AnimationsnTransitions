@@ -12,6 +12,8 @@ import com.fatimamostafa.animationsntransitions.animationtypes.ObjectAnimatorAct
 import com.fatimamostafa.animationsntransitions.animationtypes.PropertyAnimationActivity;
 import com.fatimamostafa.animationsntransitions.animationtypes.ViewAnimationActivity;
 import com.fatimamostafa.animationsntransitions.transitions.crossfade.CrossfadeTransitionActivity;
+import com.fatimamostafa.animationsntransitions.transitions.flip.FlipAnimationActivity;
+import com.fatimamostafa.animationsntransitions.transitions.viewpager.ViewpagerActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,7 +37,9 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
                 "Property Animation",
                 "Object Animator",
                 "Interpolator Animator",
-                "CrossFade Transition"
+                "CrossFade Transition",
+                "Viewpage Transition",
+                "Flip Transition"
         };
 
         mLayoutManager = new GridLayoutManager(this,2);
@@ -70,6 +74,14 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
             case 5:
                 Intent crossfadeIntent = new Intent(this, CrossfadeTransitionActivity.class);
                 startActivity(crossfadeIntent);
+                break;
+            case 6:
+                Intent viewpagerIntent = new Intent(this, ViewpagerActivity.class);
+                startActivity(viewpagerIntent);
+                break;
+            case 7:
+                Intent flipIntent = new Intent(this, FlipAnimationActivity.class);
+                startActivity(flipIntent);
                 break;
         }
     }
