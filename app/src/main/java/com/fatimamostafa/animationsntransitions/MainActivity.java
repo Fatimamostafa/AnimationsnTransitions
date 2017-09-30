@@ -11,6 +11,7 @@ import com.fatimamostafa.animationsntransitions.animationtypes.InterPolatorActiv
 import com.fatimamostafa.animationsntransitions.animationtypes.ObjectAnimatorActivity;
 import com.fatimamostafa.animationsntransitions.animationtypes.PropertyAnimationActivity;
 import com.fatimamostafa.animationsntransitions.animationtypes.ViewAnimationActivity;
+import com.fatimamostafa.animationsntransitions.transitions.crossfade.CrossfadeTransitionActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
                 "Drawable Animation",
                 "Property Animation",
                 "Object Animator",
-                "Interpolator Animator"
+                "Interpolator Animator",
+                "CrossFade Transition"
         };
 
         mLayoutManager = new GridLayoutManager(this,2);
@@ -64,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
             case 4:
                 Intent interpolatorIntent = new Intent(this, InterPolatorActivity.class);
                 startActivity(interpolatorIntent);
+                break;
+            case 5:
+                Intent crossfadeIntent = new Intent(this, CrossfadeTransitionActivity.class);
+                startActivity(crossfadeIntent);
                 break;
         }
     }

@@ -20,7 +20,10 @@
         <activity android:name=".animationtypes.DrawableAnimationActivity" />
         <activity android:name=".animationtypes.PropertyAnimationActivity" />
         <activity android:name=".animationtypes.ObjectAnimatorActivity" />
-        <activity android:name=".animationtypes.InterPolatorActivity"></activity>
+        <activity android:name=".animationtypes.InterPolatorActivity" />
+        <activity android:name=".transitions.crossfade.CrossfadeTransitionActivity" />
+        <activity android:name=".transitions.crossfade.DetailActivity" />
+        <activity android:name=".transitions.viewpager.ViewpagerActivity"></activity>
     </application>
 
 </manifest>
