@@ -24,7 +24,8 @@
         <activity android:name=".transitions.crossfade.CrossfadeTransitionActivity" />
         <activity android:name=".transitions.crossfade.DetailActivity" />
         <activity android:name=".transitions.viewpager.ViewpagerActivity" />
-        <activity android:name=".transitions.flip.FlipAnimationActivity"></activity>
+        <activity android:name=".transitions.flip.FlipAnimationActivity" />
+        <activity android:name=".transitions.transitionframework.TransitionScenesActivity"></activity>
     </application>
 
 </manifest>

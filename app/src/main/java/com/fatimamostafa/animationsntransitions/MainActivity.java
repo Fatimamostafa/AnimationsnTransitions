@@ -13,6 +13,7 @@ import com.fatimamostafa.animationsntransitions.animationtypes.PropertyAnimation
 import com.fatimamostafa.animationsntransitions.animationtypes.ViewAnimationActivity;
 import com.fatimamostafa.animationsntransitions.transitions.crossfade.CrossfadeTransitionActivity;
 import com.fatimamostafa.animationsntransitions.transitions.flip.FlipAnimationActivity;
+import com.fatimamostafa.animationsntransitions.transitions.transitionframework.TransitionScenesActivity;
 import com.fatimamostafa.animationsntransitions.transitions.viewpager.ViewpagerActivity;
 
 import butterknife.BindView;
@@ -39,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
                 "Interpolator Animator",
                 "CrossFade Transition",
                 "Viewpage Transition",
-                "Flip Transition"
+                "Flip Transition",
+                "Transition Framework"
         };
 
         mLayoutManager = new GridLayoutManager(this,2);
@@ -82,6 +84,10 @@ public class MainActivity extends AppCompatActivity implements OnClickCallback{
             case 7:
                 Intent flipIntent = new Intent(this, FlipAnimationActivity.class);
                 startActivity(flipIntent);
+                break;
+            case 8:
+                Intent trFramwrkIntent = new Intent(this, TransitionScenesActivity.class);
+                startActivity(trFramwrkIntent);
                 break;
         }
     }
